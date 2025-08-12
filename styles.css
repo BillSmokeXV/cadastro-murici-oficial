@@ -1,0 +1,95 @@
+.gradient-bg {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+
+.file-upload {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.file-upload input[type=file] {
+    position: absolute;
+    left: -9999px;
+}
+
+.status-approved { 
+    color: #10b981; 
+}
+
+.status-pending { 
+    color: #f59e0b; 
+}
+
+.status-rejected { 
+    color: #ef4444; 
+}
+
+/* Scroll infinito de empresas parceiras */
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.scroll-content {
+    display: flex;
+    animation: scroll-infinite 30s linear infinite;
+    gap: 2rem;
+}
+
+.scroll-content:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Estilos adicionais para melhor responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    header .flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    header .flex > div {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .scroll-content {
+        animation-duration: 20s;
+    }
+}
+
+/* Animações suaves */
+.transition {
+    transition: all 0.3s ease;
+}
+
+/* Melhorias no modal */
+#modal-detalhes {
+    backdrop-filter: blur(4px);
+}
+
+/* Hover effects */
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus states */
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}

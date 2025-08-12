@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MURICI LOGÍSTICA - Cadastro de Funcionários</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Scroll de Empresas Parceiras -->
+    <div class="bg-white py-4 border-b">
+        <div class="scroll-container">
+            <div class="scroll-content">
+                <!-- Primeira sequência de empresas -->
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/logo-2.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/coca-cola.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/magalu.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/mercado-livre.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/natura.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/vivo.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/tgestiona.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                
+                <!-- Segunda sequência (duplicada para scroll infinito) -->
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/logo-2.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/coca-cola.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/magalu.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/mercado-livre.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/natura.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/vivo.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/tgestiona.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+            </div>
+        </div>
+    <!-- Header -->
+    <header class="gradient-bg text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-3xl font-bold">🚛 MURICI LOGÍSTICA</h1>
+                <div class="flex space-x-4">
+                    <a href="index.html" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Início
+                    </a>
+                    <a href="candidato.html" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Meu Painel
+                    </a>
+                    <a href="admin.html" class="bg-yellow-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition">
+                        Admin
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção de Cadastro -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Cadastro de Funcionários</h2>
+            
+            <form id="cadastroForm" class="space-y-6">
+                <!-- Dados Pessoais -->
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold text-blue-800 mb-4">📋 Dados Pessoais</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nome Completo *</label>
+                            <input type="text" id="nome" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">CPF *</label>
+                            <input type="text" id="cpf" required placeholder="000.000.000-00" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Telefone *</label>
+                            <input type="tel" id="telefone" required placeholder="(00) 00000-0000" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">E-mail *</label>
+                            <input type="email" id="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Senha *</label>
+                            <input type="password" id="senha" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Confirmar Senha *</label>
+                            <input type="password" id="confirmarSenha" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dados Profissionais -->
+                <div class="bg-green-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold text-green-800 mb-4">🚚 Dados Profissionais</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Operação *</label>
+                            <select id="operacao" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">Selecione a operação</option>
+                                <option value="entrega">Entrega</option>
+                                <option value="coleta">Coleta</option>
+                                <option value="transferencia">Transferência</option>
+                                <option value="distribuicao">Distribuição</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Sigla da Base *</label>
+                            <input type="text" id="siglaBase" required placeholder="Ex: SP01, RJ02" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Categoria de Contratação *</label>
+                            <select id="categoria" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">Selecione a categoria</option>
+                                <option value="motorista-tac">Motorista TAC</option>
+                                <option value="motorista-agregado">Motorista Agregado</option>
+                                <option value="ajudante">Ajudante</option>
+                                <option value="funcionario">Funcionário</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upload de Documentos -->
+                <div class="bg-yellow-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold text-yellow-800 mb-4">📄 Documentos</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div id="campo-cnh">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">CNH (PDF) *</label>
+                            <div class="file-upload">
+                                <label class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer hover:bg-blue-600 transition flex items-center justify-center">
+                                    📎 Selecionar CNH
+                                    <input type="file" id="cnh" accept=".pdf" required>
+                                </label>
+                            </div>
+                            <span id="cnh-name" class="text-sm text-gray-500 mt-1 block"></span>
+                        </div>
+                        <div id="campo-comprovante">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Comprovante de Residência *</label>
+                            <div class="file-upload">
+                                <label class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer hover:bg-blue-600 transition flex items-center justify-center">
+                                    📎 Selecionar Comprovante
+                                    <input type="file" id="comprovante" accept=".pdf,.jpg,.jpeg,.png" required>
+                                </label>
+                            </div>
+                            <span id="comprovante-name" class="text-sm text-gray-500 mt-1 block"></span>
+                        </div>
+                        <div id="campo-crlv">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">CRLV do Veículo</label>
+                            <div class="file-upload">
+                                <label class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer hover:bg-blue-600 transition flex items-center justify-center">
+                                    📎 Selecionar CRLV
+                                    <input type="file" id="crlv" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+                            </div>
+                            <span id="crlv-name" class="text-sm text-gray-500 mt-1 block"></span>
+                        </div>
+                        <div id="campo-doc-proprietario">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Doc. Proprietário (se veículo em nome de terceiro)</label>
+                            <div class="file-upload">
+                                <label class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer hover:bg-blue-600 transition flex items-center justify-center">
+                                    📎 Selecionar Documento
+                                    <input type="file" id="docProprietario" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+                            </div>
+                            <span id="docProprietario-name" class="text-sm text-gray-500 mt-1 block"></span>
+                        </div>
+                        <div id="campo-antt" style="display: none;">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">ANTT (PDF) *</label>
+                            <div class="file-upload">
+                                <label class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer hover:bg-blue-600 transition flex items-center justify-center">
+                                    📎 Selecionar ANTT
+                                    <input type="file" id="antt" accept=".pdf">
+                                </label>
+                            </div>
+                            <span id="antt-name" class="text-sm text-gray-500 mt-1 block"></span>
+                        </div>
+                        <div id="campo-rg">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">RG</label>
+                            <div class="file-upload">
+                                <label class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer hover:bg-blue-600 transition flex items-center justify-center">
+                                    📎 Selecionar RG
+                                    <input type="file" id="rg" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+                            </div>
+                            <span id="rg-name" class="text-sm text-gray-500 mt-1 block"></span>
+                        </div>
+                        <div id="campo-carteira-trabalho" style="display: none;">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Carteira de Trabalho</label>
+                            <div class="file-upload">
+                                <label class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer hover:bg-blue-600 transition flex items-center justify-center">
+                                    📎 Selecionar Carteira
+                                    <input type="file" id="carteiraTrabalho" accept=".pdf,.jpg,.jpeg,.png">
+                                </label>
+                            </div>
+                            <span id="carteiraTrabalho-name" class="text-sm text-gray-500 mt-1 block"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition text-lg">
+                        ✅ Enviar Cadastro
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Controle de documentos por categoria
+        function controlarDocumentos() {
+            const categoria = document.getElementById('categoria').value;
+            
+            // Campos de documentos
+            const campoCnh = document.getElementById('campo-cnh');
+            const campoCrlv = document.getElementById('campo-crlv');
+            const campoDocProprietario = document.getElementById('campo-doc-proprietario');
+            const campoAntt = document.getElementById('campo-antt');
+            const campoRg = document.getElementById('campo-rg');
+            const campoCarteiraTrabalho = document.getElementById('campo-carteira-trabalho');
+            
+            // Inputs para controle de obrigatoriedade
+            const inputCnh = document.getElementById('cnh');
+            const inputAntt = document.getElementById('antt');
+            const inputRg = document.getElementById('rg');
+            const inputCarteiraTrabalho = document.getElementById('carteiraTrabalho');
+            
+            // Resetar visibilidade e obrigatoriedade
+            [campoCnh, campoCrlv, campoDocProprietario, campoAntt, campoRg, campoCarteiraTrabalho].forEach(campo => {
+                if (campo) campo.style.display = 'none';
+            });
+            
+            [inputCnh, inputAntt, inputRg, inputCarteiraTrabalho].forEach(input => {
+                if (input) input.required = false;
+            });
+            
+            if (categoria === 'motorista-tac') {
+                // Motorista TAC: CNH, CRLV, Doc Proprietário, RG
+                campoCnh.style.display = 'block';
+                campoCrlv.style.display = 'block';
+                campoDocProprietario.style.display = 'block';
+                campoRg.style.display = 'block';
+                inputCnh.required = true;
+                inputRg.required = true;
+                
+            } else if (categoria === 'motorista-agregado') {
+                // Motorista Agregado: CNH, CRLV, Doc Proprietário, ANTT, RG
+                campoCnh.style.display = 'block';
+                campoCrlv.style.display = 'block';
+                campoDocProprietario.style.display = 'block';
+                campoAntt.style.display = 'block';
+                campoRg.style.display = 'block';
+                inputCnh.required = true;
+                inputAntt.required = true;
+                inputRg.required = true;
+                
+            } else if (categoria === 'ajudante' || categoria === 'funcionario') {
+                // Ajudante/Funcionário: apenas Comprovante, RG e Carteira de Trabalho
+                campoRg.style.display = 'block';
+                campoCarteiraTrabalho.style.display = 'block';
+                inputRg.required = true;
+                inputCarteiraTrabalho.required = true;
+            }
+        }
+
+        // Inicializar eventos específicos da página de cadastro
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adicionar evento de mudança na categoria
+            document.getElementById('categoria').addEventListener('change', controlarDocumentos);
+            
+            // Submissão do formulário
+            document.getElementById('cadastroForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validação básica
+                const senha = document.getElementById('senha').value;
+                const confirmarSenha = document.getElementById('confirmarSenha').value;
+                
+                if (senha !== confirmarSenha) {
+                    alert('As senhas não coincidem!');
+                    return;
+                }
+                
+                // Simular envio
+                alert('✅ Cadastro realizado com sucesso! Você receberá um e-mail com as instruções para acompanhar sua candidatura.');
+                
+                // Limpar formulário
+                this.reset();
+                
+                // Limpar nomes dos arquivos
+                const nameSpans = document.querySelectorAll('[id$="-name"]');
+                nameSpans.forEach(span => {
+                    span.textContent = '';
+                    span.classList.remove('text-green-600');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

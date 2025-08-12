@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MURICI LOGÍSTICA - Painel do Candidato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Scroll de Empresas Parceiras -->
+    <div class="bg-white py-4 border-b">
+        <div class="scroll-container">
+            <div class="scroll-content">
+                <!-- Primeira sequência de empresas -->
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/logo-2.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/coca-cola.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/magalu.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/mercado-livre.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/natura.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/vivo.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/tgestiona.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                
+                <!-- Segunda sequência (duplicada para scroll infinito) -->
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/logo-2.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/coca-cola.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/magalu.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/mercado-livre.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/natura.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/vivo.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/tgestiona.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+            </div>
+        </div>
+    <!-- Header -->
+    <header class="gradient-bg text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-3xl font-bold">🚛 MURICI LOGÍSTICA</h1>
+                <div class="flex space-x-4">
+                    <a href="index.html" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Início
+                    </a>
+                    <a href="cadastro.html" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Cadastro
+                    </a>
+                    <a href="admin.html" class="bg-yellow-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition">
+                        Admin
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Painel do Candidato -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Meu Painel - Status da Candidatura</h2>
+            
+            <!-- Login do Candidato -->
+            <div id="login-candidato" class="max-w-md mx-auto">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">E-mail</label>
+                        <input type="email" id="loginEmail" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Senha</label>
+                        <input type="password" id="loginSenha" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                    <button onclick="loginCandidato()" class="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Entrar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Status dos Documentos -->
+            <div id="status-documentos" class="hidden">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">📊 Status dos Documentos</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-white rounded border">
+                            <span>CNH</span>
+                            <span id="status-cnh" class="font-semibold status-pending">⏳ Pendente</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded border">
+                            <span>Comprovante de Residência</span>
+                            <span id="status-comprovante" class="font-semibold status-pending">⏳ Pendente</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded border">
+                            <span>CRLV</span>
+                            <span id="status-crlv" class="font-semibold status-pending">⏳ Pendente</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded border">
+                            <span>ANTT</span>
+                            <span id="status-antt" class="font-semibold status-pending">⏳ Pendente</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded border">
+                            <span>RG</span>
+                            <span id="status-rg" class="font-semibold status-pending">⏳ Pendente</span>
+                        </div>
+                        <div class="flex justify-between items-center p-3 bg-white rounded border">
+                            <span>Carteira de Trabalho</span>
+                            <span id="status-carteira" class="font-semibold status-pending">⏳ Pendente</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                        <h4 class="font-semibold text-blue-800">Status Geral da Candidatura:</h4>
+                        <p id="status-geral" class="text-blue-700 mt-1">Em análise - Aguardando aprovação dos documentos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Login do candidato
+        function loginCandidato() {
+            const email = document.getElementById('loginEmail').value;
+            const senha = document.getElementById('loginSenha').value;
+            
+            if (email && senha) {
+                document.getElementById('login-candidato').classList.add('hidden');
+                document.getElementById('status-documentos').classList.remove('hidden');
+                
+                // Simular carregamento do status
+                setTimeout(() => {
+                    document.getElementById('status-geral').textContent = 'Documentos em análise - Previsão de resposta: 3 dias úteis';
+                }, 500);
+            } else {
+                alert('Por favor, preencha e-mail e senha.');
+            }
+        }
+    </script>
+</body>
+</html>

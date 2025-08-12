@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MURICI LOGÍSTICA - Painel Administrativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Scroll de Empresas Parceiras -->
+    <div class="bg-white py-4 border-b">
+        <div class="scroll-container">
+            <div class="scroll-content">
+                <!-- Primeira sequência de empresas -->
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/logo-2.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/coca-cola.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/magalu.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/mercado-livre.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/natura.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/vivo.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/tgestiona.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                
+                <!-- Segunda sequência (duplicada para scroll infinito) -->
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/logo-2.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/coca-cola.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/magalu.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/mercado-livre.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/natura.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/vivo.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+                <div class="flex items-center justify-center min-w-[200px] h-16 bg-gray-100 rounded-lg px-4">
+                    <img src="./assets/tgestiona.png" alt="Empresa B" class="max-h-12 object-contain" />
+                </div>
+            </div>
+        </div>
+    <!-- Header -->
+    <header class="gradient-bg text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-3xl font-bold">🚛 MURICI LOGÍSTICA</h1>
+                <div class="flex space-x-4">
+                    <a href="index.html" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Início
+                    </a>
+                    <a href="cadastro.html" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Cadastro
+                    </a>
+                    <a href="candidato.html" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Meu Painel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Painel Administrativo -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">🔧 Painel Administrativo</h2>
+            
+            <!-- Lista de Candidatos -->
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse border border-gray-300">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="border border-gray-300 px-4 py-2 text-left">Nome</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left">Categoria</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left">Base</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left">Status</th>
+                            <th class="border border-gray-300 px-4 py-2 text-left">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-candidatos">
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">João Silva</td>
+                            <td class="border border-gray-300 px-4 py-2">Motorista TAC</td>
+                            <td class="border border-gray-300 px-4 py-2">SP01</td>
+                            <td class="border border-gray-300 px-4 py-2">
+                                <span class="status-pending">⏳ Em análise</span>
+                            </td>
+                            <td class="border border-gray-300 px-4 py-2">
+                                <button onclick="abrirDetalhes('joao')" class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition">
+                                    Ver Detalhes
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">Maria Santos</td>
+                            <td class="border border-gray-300 px-4 py-2">Ajudante</td>
+                            <td class="border border-gray-300 px-4 py-2">RJ02</td>
+                            <td class="border border-gray-300 px-4 py-2">
+                                <span class="status-approved">✅ Aprovado</span>
+                            </td>
+                            <td class="border border-gray-300 px-4 py-2">
+                                <button onclick="abrirDetalhes('maria')" class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600 transition">
+                                    Ver Detalhes
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Detalhes do Candidato -->
+    <div id="modal-detalhes" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-xl max-w-4xl w-full max-h-screen overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold">Detalhes do Candidato</h3>
+                        <button onclick="fecharModal()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+                    </div>
+                    
+                    <div id="detalhes-candidato" class="space-y-6">
+                        <!-- Dados Pessoais -->
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-3">Dados Pessoais</h4>
+                            <div class="grid md:grid-cols-2 gap-3 text-sm">
+                                <div><strong>Nome:</strong> <span id="det-nome">João Silva</span></div>
+                                <div><strong>CPF:</strong> <span id="det-cpf">123.456.789-00</span></div>
+                                <div><strong>Telefone:</strong> <span id="det-telefone">(11) 99999-9999</span></div>
+                                <div><strong>E-mail:</strong> <span id="det-email">joao@email.com</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Aprovação de Documentos -->
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-yellow-800 mb-3">Aprovação de Documentos</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between p-3 bg-white rounded border">
+                                    <span>CNH</span>
+                                    <div class="flex space-x-2">
+                                        <button onclick="aprovarDoc('cnh')" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600 transition">
+                                            ✅ Aprovar
+                                        </button>
+                                        <button onclick="rejeitarDoc('cnh')" class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600 transition">
+                                            ❌ Rejeitar
+                                        </button>
+                                        <button onclick="solicitarReenvio('cnh')" class="bg-yellow-500 text-white px-3 py-1 rounded text-sm hover:bg-yellow-600 transition">
+                                            🔄 Reenviar
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-white rounded border">
+                                    <span>Comprovante de Residência</span>
+                                    <div class="flex space-x-2">
+                                        <button onclick="aprovarDoc('comprovante')" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600 transition">
+                                            ✅ Aprovar
+                                        </button>
+                                        <button onclick="rejeitarDoc('comprovante')" class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600 transition">
+                                            ❌ Rejeitar
+                                        </button>
+                                        <button onclick="solicitarReenvio('comprovante')" class="bg-yellow-500 text-white px-3 py-1 rounded text-sm hover:bg-yellow-600 transition">
+                                            🔄 Reenviar
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-white rounded border">
+                                    <span>CRLV</span>
+                                    <div class="flex space-x-2">
+                                        <button onclick="aprovarDoc('crlv')" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600 transition">
+                                            ✅ Aprovar
+                                        </button>
+                                        <button onclick="rejeitarDoc('crlv')" class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600 transition">
+                                            ❌ Rejeitar
+                                        </button>
+                                        <button onclick="solicitarReenvio('crlv')" class="bg-yellow-500 text-white px-3 py-1 rounded text-sm hover:bg-yellow-600 transition">
+                                            🔄 Reenviar
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-white rounded border">
+                                    <span>ANTT</span>
+                                    <div class="flex space-x-2">
+                                        <button onclick="aprovarDoc('antt')" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600 transition">
+                                            ✅ Aprovar
+                                        </button>
+                                        <button onclick="rejeitarDoc('antt')" class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600 transition">
+                                            ❌ Rejeitar
+                                        </button>
+                                        <button onclick="solicitarReenvio('antt')" class="bg-yellow-500 text-white px-3 py-1 rounded text-sm hover:bg-yellow-600 transition">
+                                            🔄 Reenviar
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-white rounded border">
+                                    <span>RG</span>
+                                    <div class="flex space-x-2">
+                                        <button onclick="aprovarDoc('rg')" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600 transition">
+                                            ✅ Aprovar
+                                        </button>
+                                        <button onclick="rejeitarDoc('rg')" class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600 transition">
+                                            ❌ Rejeitar
+                                        </button>
+                                        <button onclick="solicitarReenvio('rg')" class="bg-yellow-500 text-white px-3 py-1 rounded text-sm hover:bg-yellow-600 transition">
+                                            🔄 Reenviar
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-white rounded border">
+                                    <span>Carteira de Trabalho</span>
+                                    <div class="flex space-x-2">
+                                        <button onclick="aprovarDoc('carteira')" class="bg-green-500 text-white px-3 py-1 rounded text-sm hover:bg-green-600 transition">
+                                            ✅ Aprovar
+                                        </button>
+                                        <button onclick="rejeitarDoc('carteira')" class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600 transition">
+                                            ❌ Rejeitar
+                                        </button>
+                                        <button onclick="solicitarReenvio('carteira')" class="bg-yellow-500 text-white px-3 py-1 rounded text-sm hover:bg-yellow-600 transition">
+                                            🔄 Reenviar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Painel administrativo
+        function abrirDetalhes(candidatoId) {
+            const candidato = candidatos.find(c => c.id === candidatoId);
+            if (candidato) {
+                document.getElementById('det-nome').textContent = candidato.nome;
+                document.getElementById('det-cpf').textContent = candidato.cpf;
+                document.getElementById('det-telefone').textContent = candidato.telefone;
+                document.getElementById('det-email').textContent = candidato.email;
+                
+                document.getElementById('modal-detalhes').classList.remove('hidden');
+            }
+        }
+
+        function fecharModal() {
+            document.getElementById('modal-detalhes').classList.add('hidden');
+        }
+
+        function aprovarDoc(documento) {
+            alert(`✅ Documento ${documento.toUpperCase()} aprovado!`);
+        }
+
+        function rejeitarDoc(documento) {
+            const motivo = prompt(`Motivo da rejeição do documento ${documento.toUpperCase()}:`);
+            if (motivo) {
+                alert(`❌ Documento ${documento.toUpperCase()} rejeitado. Motivo: ${motivo}`);
+            }
+        }
+
+        function solicitarReenvio(documento) {
+            const observacao = prompt(`Observações para reenvio do documento ${documento.toUpperCase()}:`);
+            if (observacao) {
+                alert(`🔄 Solicitação de reenvio enviada para ${documento.toUpperCase()}. Observação: ${observacao}`);
+            }
+        }
+    </script>
+</body>
+</html>
