@@ -13,6 +13,11 @@
     left: -9999px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
 .status-approved { 
     color: #10b981; 
 }
@@ -50,6 +55,19 @@
     }
 }
 
+/* Mobile: até 640px */
+@media (max-width: 640px) {
+    .menu-buttons {
+      flex-direction: column;       /* Coloca um abaixo do outro */
+      gap: 10px;                     /* Espaço entre os botões */
+    }
+  
+    .menu-buttons a {
+      width: 100%;                   /* Ocupa toda a largura disponível */
+      text-align: center;            /* Centraliza o texto */
+      animation: slideIn 0.3s ease;   /* Aplica a animação */
+    }
+  }
 /* Estilos adicionais para melhor responsividade */
 @media (max-width: 768px) {
     .container {
